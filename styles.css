@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+.column {
+    background-color: blue;
+    border: green;
+    padding: 11px;
+}
