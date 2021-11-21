@@ -18,7 +18,7 @@ for (i = 0; i < dimensions; i++) {
 
 //Event listener for hovering over a square
 const pixels = document.querySelectorAll('.column');
-pixels.forEach(pixel => pixel.addEventListener('mouseenter', draw))
+pixels.forEach(pixel => pixel.addEventListener('mouseenter', draw));
 
 // Event to turn pixel black
 function draw (e) {
@@ -26,4 +26,14 @@ function draw (e) {
     e.target.classList.add('drawn');
 } 
 
+// Clear board when button is clicked
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', clearGrid);
 
+// Event for reset
+function clearGrid() {
+    console.log("Success")
+    const drawns = document.querySelectorAll('.drawn');
+    drawns.forEach(drawn => drawn.classList.remove('drawn'));
+    drawns.forEach(drawn => drawn.classList.add('column'));
+}
