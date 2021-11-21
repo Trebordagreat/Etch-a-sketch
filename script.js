@@ -16,6 +16,14 @@ for (i = 0; i < dimensions; i++) {
     }
 }
 
+//Event listener for hovering over a square
+const pixels = document.querySelectorAll('.column');
+pixels.forEach(pixel => pixel.addEventListener('mouseenter', draw))
 
+// Event to turn pixel black
+function draw (e) {
+    e.target.classList.remove('column');
+    e.target.classList.add('drawn');
+} 
 
 

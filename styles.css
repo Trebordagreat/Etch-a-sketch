@@ -28,3 +28,11 @@
     border: solid;
     border-width: 1px;
 }
+
+.drawn {
+    display: flex;
+    flex: 1;
+    border: solid;
+    border-width: 1px;
+    background-color: black;
+}
